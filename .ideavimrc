@@ -11,7 +11,6 @@ nmap s <Plug>(easymotion-s)
 map <Leader>l <Plug>(easymotion-sl)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 "历史记录
 set history=1000
@@ -33,6 +32,7 @@ set rnu
 
 "高亮搜索
 set hlsearch
+
 "按esc顺便取消高亮
 nnoremap <esc> <esc>:noh<return>
 nnoremap <C-[> <esc>:noh<return>
@@ -49,11 +49,13 @@ set clipboard=unnamedplus
 "在可视模式下，使用X将高亮选中的字符串进行搜索
 vnoremap X y/<C-R>+<CR>
 
-搜索时智能匹配大小写
+"搜索时智能匹配大小写
 set ignorecasesmartcase
 
+"idea重构时保持当前的vim模式
 set idearefactormode=keep
 
+"使用idea的join代替原始的j
 set ideajoin
 
 "命令模式下做映射
@@ -62,5 +64,5 @@ set ideajoin
 
 " nnoremap / :action Find<CR>
 
-noremap <C-O> <ESC>:action Back<CR>
-noremap <C-I> <ESC>:action Forward<CR>
+"noremap <C-O> <ESC>:action Back<CR>
+"noremap <C-I> <ESC>:action Forward<CR>
