@@ -49,7 +49,7 @@ set clipboard=unnamedplus
 "在可视模式下，使用X将高亮选中的字符串进行搜索
 vnoremap X y/<C-R>+<CR>
 
-"搜索时智能匹配大小写
+"搜索时智能匹配大写
 set ignorecasesmartcase
 
 "idea重构时保持当前的vim模式
@@ -57,6 +57,8 @@ set idearefactormode=keep
 
 "使用idea的join代替原始的j
 set ideajoin
+
+nmap gb :action GotoImplementation<CR>
 
 "命令模式下做映射
 "map <C-P><Up>
