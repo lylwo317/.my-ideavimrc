@@ -2,7 +2,7 @@
 
 let mapleader=" "
 set easymotion
-set keep-english-in-normal-and-restore-in-insert
+"set keep-english-in-normal-and-restore-in-insert
 
 map <Leader> <Plug>(easymotion-prefix)
 
@@ -11,6 +11,12 @@ nmap s <Plug>(easymotion-s)
 map <Leader>l <Plug>(easymotion-sl)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+"添加对函数参数对象的支持，这样就可以用daa，dia删除参数
+set argtextobj
+
+"添加对文件对象的支持，这样就可以用=ea，格式化整个文件了可以用来代替gg=G
+set textobj-entire
 
 "历史记录
 set history=1000
@@ -48,6 +54,8 @@ set clipboard=unnamedplus
 
 "在可视模式下，使用X将高亮选中的字符串进行搜索
 vnoremap X y/<C-R>+<CR>
+"快速定位R.layout
+nnoremap <Leader>R /R.layout/e+2<CR>:noh<cr>gd<cr>
 
 "搜索时智能匹配大写
 set ignorecasesmartcase
@@ -63,8 +71,7 @@ nmap gb :action GotoImplementation<CR>
 "命令模式下做映射
 "map <C-P><Up>
 "map <C-N><Down>
-
-" nnoremap / :action Find<CR>
-
+"nnoremap / :action Find<CR>
 "noremap <C-O> <ESC>:action Back<CR>
 "noremap <C-I> <ESC>:action Forward<CR>
+
