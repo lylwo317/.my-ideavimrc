@@ -30,6 +30,9 @@ set surround
 "启用multicursor
 set multiple-cursors
 
+"启用注释功能
+set commentary
+
 "显示行号
 set nu
 
@@ -74,4 +77,3 @@ nmap gb :action GotoImplementation<CR>
 "nnoremap / :action Find<CR>
 "noremap <C-O> <ESC>:action Back<CR>
 "noremap <C-I> <ESC>:action Forward<CR>
-
