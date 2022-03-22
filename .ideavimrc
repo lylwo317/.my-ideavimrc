@@ -71,6 +71,10 @@ set ideajoin
 
 nmap gb :action GotoImplementation<CR>
 
+"禁止window下错误铃声
+set visualbell
+set noerrorbells
+
 "命令模式下做映射
 "map <C-P><Up>
 "map <C-N><Down>
